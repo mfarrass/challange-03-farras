@@ -1,28 +1,35 @@
+global.users = []
+
 // impor modul express ej layouts
 const expressLayouts = require('express-ejs-layouts')
 // import express
 const express = require('express')
 const app = express()
-const port = 1500
+
+// import module router
+const router = require('./routers')
+
+
 
 // setup view engine
 app.set('view engine', 'ejs')
+app.use(expressLayouts)
+app.use(express.urlencoded({ extended: false}))
+app.set('layout', 'layouts/default')
+
 // setup public folder
 app.use( express.static('public') )
-app.use(expressLayouts)
 
 
 
-// default route
-app.get('/', (req, res) => {
-    res.render('template')
-})
+// Default Router ada di layout 
+app.get('/', (req,res) => { res.render('index') })
 
-// product
-app.get('/product', (req, res) => {
-    res.render('product')
-})
+app.use('/partials',router.partial)
+app.use('/auth',router.auth)
 
 
 
-app.listen(port, () => { console.log(`localhost:${port} is running...`) })
+
+app.listen(1500, () => {console.log(`is running...`) })
+
