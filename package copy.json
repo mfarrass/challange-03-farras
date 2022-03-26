@@ -1,0 +1,28 @@
+{
+  "name": "challange-03-faras",
+  "version": "1.0.0",
+  "description": "Ini adalah Challange-03 Pada Chapter-03 Studi Independent Saya Di Kampus Merdeka x Binar Academy FEJS-02",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfarrass/challange-03-farras.git"
+  },
+  "author": "Muhamad Farras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfarrass/challange-03-farras/issues"
+  },
+  "homepage": "https://github.com/mfarrass/challange-03-farras#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0"
+  }
+}
